@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "VCRCore"
   s.version      = "0.0.1"
-  s.summary      = "A short description of KJZTool."
+  s.summary      = "A short description of Core."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     "hello world"
                    DESC
 
-  s.homepage     = "http://192.168.10.117/IOS_Common/KJZTool.git"
+  s.homepage     = "https://github.com/vcc1235/Core.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
   #   http://192.168.10.117/IOS_Common/KJZTool.git
-  s.source       = { :git => "http://192.168.10.117/IOS_Common/KJZTool.git" }
+  s.source       = { :git => "https://github.com/vcc1235/Core.git" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
