@@ -39,7 +39,7 @@
 		B856FF092109CC4300DB6CB1 /* NSString+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = B856FF072109CC4300DB6CB1 /* NSString+Hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B856FF0C2109CD7600DB6CB1 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = B856FF0A2109CD7600DB6CB1 /* NSObject+Swizzling.m */; };
 		B856FF0D2109CD7600DB6CB1 /* NSObject+Swizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = B856FF0B2109CD7600DB6CB1 /* NSObject+Swizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B856FF0F2109D2AA00DB6CB1 /* KJZTool.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B856FF0E2109D2A900DB6CB1 /* KJZTool.podspec */; };
+		B856FF0F2109D2AA00DB6CB1 /* Core.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B856FF0E2109D2A900DB6CB1 /* Core.podspec */; };
 		B856FF15210ABC2800DB6CB1 /* STResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B856FF14210ABC2800DB6CB1 /* STResource.bundle */; };
 		B8886F992109772A00998E42 /* STCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886F972109772A00998E42 /* STCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8886F9A2109772A00998E42 /* STCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B8886F982109772A00998E42 /* STCore.m */; };
@@ -92,7 +92,7 @@
 		B856FF072109CC4300DB6CB1 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		B856FF0A2109CD7600DB6CB1 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
 		B856FF0B2109CD7600DB6CB1 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
-		B856FF0E2109D2A900DB6CB1 /* KJZTool.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KJZTool.podspec; path = ../../KJZTool.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B856FF0E2109D2A900DB6CB1 /* Core.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Core.podspec; path = ../../Core.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B856FF14210ABC2800DB6CB1 /* STResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = STResource.bundle; sourceTree = "<group>"; };
 		B8886F972109772A00998E42 /* STCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCore.h; sourceTree = "<group>"; };
 		B8886F982109772A00998E42 /* STCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STCore.m; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		B8115AF220FF34EF00A610CC /* STTFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B856FF0E2109D2A900DB6CB1 /* KJZTool.podspec */,
+				B856FF0E2109D2A900DB6CB1 /* Core.podspec */,
 				B8115AF320FF34EF00A610CC /* STTFrameworks.h */,
 				B819AB72212AAC0E00B5542C /* Lib */,
 				B819AB71212AABA000B5542C /* Until */,
@@ -438,7 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B856FF15210ABC2800DB6CB1 /* STResource.bundle in Resources */,
-				B856FF0F2109D2AA00DB6CB1 /* KJZTool.podspec in Resources */,
+				B856FF0F2109D2AA00DB6CB1 /* Core.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
