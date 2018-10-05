@@ -25,6 +25,11 @@
     NSDictionary *dict = [self paragm];
     return dict[key];
 }
+-(id(^)(NSString *key))getObject{
+    return ^id(NSString *key){
+        return [self getObjectForKey:key];
+    };
+}
 -(void)setObject:(id)object ForKey:(NSString *)key{
     if (![key isKindOfClass:[NSString class]]) {
         object = @"" ;
