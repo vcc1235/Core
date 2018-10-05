@@ -21,7 +21,7 @@
 -(id)getObjectForKey:(NSString *)key ;
 /** 设置值 **/
 -(void)setObject:(id)object ForKey:(NSString *)key ;
-
+-(id(^)(NSString *key))getObject ;
 @end
 
 
