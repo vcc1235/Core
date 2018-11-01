@@ -17,6 +17,7 @@ target 'STTFrameworks' do
   # use_frameworks!
   project 'STTFrameworks/STTFrameworks.xcodeproj'
   pod 'AFNetworking', '~> 3.1.0'
+  pod 'XMLDictionary'
   pod 'SVProgressHUD'
   pod 'Masonry'
   pod 'ReactiveObjC'

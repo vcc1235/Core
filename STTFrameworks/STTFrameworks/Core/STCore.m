@@ -9,6 +9,8 @@
 #import "STCore.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <XMLDictionary/XMLDictionary.h>
+
 @interface AFHttpClient : AFHTTPSessionManager
 
 + (instancetype)sharedClient;
@@ -139,6 +141,67 @@ static AFNetworkReachabilityManager * _reachablityManager;
 
 }
 
++(NSURLSessionDataTask *)xmlRequestTask:(void (^)(STCore *))request response:(ResponseTask)response{
+    
+    if (request == nil) {
+        return nil ;
+    }
+    STCore *core = STCore.alloc.init ;
+    request(core);
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    [AFXMLParserResponseSerializer serializer].acceptableContentTypes = [NSSet setWithObjects:@"text/xml", @"application/xml", nil];
+    if (core.method == RequestGET) {
+        return [manager GET:core.url parameters:core.param progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSXMLParser *parser = (NSXMLParser *)responseObject ;
+            NSDictionary *object = [NSDictionary dictionaryWithXMLParser:parser];
+            if (response) {
+                response(object,nil);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (response) {
+                response(nil,error);
+            }
+        }];
+    }else if(core.method == RequestPOST){
+        return [manager POST:core.url parameters:core.param progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSXMLParser *parser = (NSXMLParser *)responseObject ;
+            NSDictionary *object = [NSDictionary dictionaryWithXMLParser:parser];
+            if (response) {
+                response(object,nil);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (response) {
+                response(nil,error);
+            }
+        }];
+    }else if (core.method == RequestUpLoad){
+        //获取完整的url路径
+        FormData *__formData = core.formData;
+        core.url = [core.url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        return [manager POST:core.url parameters:core.param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            [formData appendPartWithFileData:__formData.data name:__formData.name fileName:__formData.fileName mimeType:__formData.mimeType];
+        } progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (response) {
+                response(responseObject,nil);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (response) {
+                response(nil,error);
+            }
+        }];
+    }else{
+        return nil ;
+    }
+    
+}
+
 +(STCore *(^)(NSString *))requestTask{
     return ^STCore *(NSString *url){
         STCore *Store = [[STCore alloc]init];
@@ -161,6 +224,17 @@ static AFNetworkReachabilityManager * _reachablityManager;
 -(NSURLSessionDataTask *(^)(ResponseTask))responseTask{
     return ^NSURLSessionDataTask*(ResponseTask response){
         return [STCore requestTask:^(STCore *core) {
+            core.url = self.url ;
+            core.param = self.param ;
+            core.method = self.method ;
+        } response:response];
+    };
+}
+
+-(NSURLSessionDataTask *(^)(ResponseTask))xmlResponseTask{
+    
+    return ^NSURLSessionDataTask*(ResponseTask response){
+        return [STCore xmlRequestTask:^(STCore *core) {
             core.url = self.url ;
             core.param = self.param ;
             core.method = self.method ;

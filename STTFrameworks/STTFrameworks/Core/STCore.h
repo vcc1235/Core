@@ -86,7 +86,9 @@ typedef void(^Progress)(double  progress);
 -(STCore *(^)(NSDictionary *params))requestBody ;
 
 -(STCore *(^)(RequestMethod method))requestMethod;
-
+/** XML 请求 **/
+-(NSURLSessionDataTask *(^)(ResponseTask response))xmlResponseTask ;
+/** JSON 请求 **/
 -(NSURLSessionDataTask *(^)(ResponseTask response))responseTask ;
 
 +(ResponseTask)setResponse:(ResponseTask)response ;

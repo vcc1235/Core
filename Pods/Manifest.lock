@@ -17,12 +17,14 @@ PODS:
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.0)
   - SVProgressHUD (2.2.5)
+  - XMLDictionary (1.4.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - Masonry
   - ReactiveObjC
   - SVProgressHUD
+  - XMLDictionary
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -30,13 +32,15 @@ SPEC REPOS:
     - Masonry
     - ReactiveObjC
     - SVProgressHUD
+    - XMLDictionary
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
 
-PODFILE CHECKSUM: 6f2c81ec8aa540cc2d3c10d20957ce6f63dab97b
+PODFILE CHECKSUM: 884fc77c4b190f3cb39001f126cc3db5bbe57768
 
 COCOAPODS: 1.5.0
