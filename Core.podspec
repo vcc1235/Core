@@ -163,6 +163,7 @@ Pod::Spec.new do |s|
         end
         ss.subspec 'UIColor' do |sss|
             sss.source_files = path+'Category/UIColor/*{.h,.m}'
+        end
     end
     s.subspec 'Until' do |ss|
         ss.dependency s.name+'/Category/NSDictionary'
