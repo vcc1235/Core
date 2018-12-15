@@ -176,6 +176,7 @@ Pod::Spec.new do |s|
     end
     s.subspec 'Lib' do |ss|
         ss.subspec 'FuncTool' do |sss|
+            sss.dependency s.name+'/Category'
             sss.source_files = path+'Lib/Func/*{.h , .m}'
         end
     end
