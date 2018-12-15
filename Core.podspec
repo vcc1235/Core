@@ -173,6 +173,11 @@ Pod::Spec.new do |s|
     s.subspec 'Core' do |ss|
         ss.source_files = path+'Core/*{.h,.m}'
     end
+    s.subspec 'Lib' do |ss|
+        ss.subspec 'FuncTool' do |sss|
+            sss.source_files = path+'Lib/Func/*{.h , .m}'
+        end
+    end
     
 
   # s.framework  = "SomeFramework"

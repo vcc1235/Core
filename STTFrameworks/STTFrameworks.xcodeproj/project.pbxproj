@@ -53,6 +53,12 @@
 		B8886FB52109988900998E42 /* STIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886FB32109988900998E42 /* STIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8886FB62109988900998E42 /* STIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B8886FB42109988900998E42 /* STIdentifier.m */; };
 		B8886FB821099CFA00998E42 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886FB721099CFA00998E42 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8E97B8521C4C26E00075FCB /* VCRFuncTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */; };
+		B8E97B8621C4C26E00075FCB /* VCRFuncTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8E97B8921C4C30C00075FCB /* NSObject+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E97B8721C4C30C00075FCB /* NSObject+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8E97B8A21C4C30C00075FCB /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E97B8821C4C30C00075FCB /* NSObject+Extension.m */; };
+		B8E97B8E21C4C37400075FCB /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E97B8C21C4C37400075FCB /* UIColor+Extension.m */; };
+		B8E97B8F21C4C37400075FCB /* UIColor+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E97B8D21C4C37400075FCB /* UIColor+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +112,12 @@
 		B8886FB32109988900998E42 /* STIdentifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STIdentifier.h; sourceTree = "<group>"; };
 		B8886FB42109988900998E42 /* STIdentifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STIdentifier.m; sourceTree = "<group>"; };
 		B8886FB721099CFA00998E42 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRFuncTool.m; sourceTree = "<group>"; };
+		B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRFuncTool.h; sourceTree = "<group>"; };
+		B8E97B8721C4C30C00075FCB /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		B8E97B8821C4C30C00075FCB /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		B8E97B8C21C4C37400075FCB /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		B8E97B8D21C4C37400075FCB /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +242,7 @@
 		B819AB72212AAC0E00B5542C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B8E97B8221C4C25100075FCB /* Func */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 		B8886F9D21097EF300998E42 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				B8E97B8B21C4C32600075FCB /* UIColor */,
 				B8886FB721099CFA00998E42 /* Category.h */,
 				B819AB7B212AAC8400B5542C /* NSDictionary */,
 				B819AB6C212A8C8400B5542C /* UINavigationController */,
@@ -338,10 +352,30 @@
 		B8886FB92109A8ED00998E42 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				B8E97B8721C4C30C00075FCB /* NSObject+Extension.h */,
+				B8E97B8821C4C30C00075FCB /* NSObject+Extension.m */,
 				B856FF0B2109CD7600DB6CB1 /* NSObject+Swizzling.h */,
 				B856FF0A2109CD7600DB6CB1 /* NSObject+Swizzling.m */,
 			);
 			path = NSObject;
+			sourceTree = "<group>";
+		};
+		B8E97B8221C4C25100075FCB /* Func */ = {
+			isa = PBXGroup;
+			children = (
+				B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */,
+				B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */,
+			);
+			path = Func;
+			sourceTree = "<group>";
+		};
+		B8E97B8B21C4C32600075FCB /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				B8E97B8D21C4C37400075FCB /* UIColor+Extension.h */,
+				B8E97B8C21C4C37400075FCB /* UIColor+Extension.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +393,9 @@
 				B819AB67212A6E1300B5542C /* UIButton+Activity.h in Headers */,
 				B819AB84212AAC8400B5542C /* NSDictionary+Hash.h in Headers */,
 				B819AB60212A6D4D00B5542C /* UIImage+Extension.h in Headers */,
+				B8E97B8621C4C26E00075FCB /* VCRFuncTool.h in Headers */,
 				B819AB82212AAC8400B5542C /* NSDictionary+Extension.h in Headers */,
+				B8E97B8F21C4C37400075FCB /* UIColor+Extension.h in Headers */,
 				B819AB6A212A6F5400B5542C /* CALayer+BorderColor.h in Headers */,
 				B819AB6F212A8CAF00B5542C /* UINavigationController+StatusBar.h in Headers */,
 				B819AB83212AAC8400B5542C /* NSDictionary+Property.h in Headers */,
@@ -367,6 +403,7 @@
 				B8886FB52109988900998E42 /* STIdentifier.h in Headers */,
 				B8886FB821099CFA00998E42 /* Category.h in Headers */,
 				B8886FAF2109961C00998E42 /* STManage.h in Headers */,
+				B8E97B8921C4C30C00075FCB /* NSObject+Extension.h in Headers */,
 				B856FF042109AA9700DB6CB1 /* NSString+Extension.h in Headers */,
 				B8886FAA210992CB00998E42 /* NSArray+Extension.h in Headers */,
 				B8886F992109772A00998E42 /* STCore.h in Headers */,
@@ -494,8 +531,11 @@
 				B8886FB62109988900998E42 /* STIdentifier.m in Sources */,
 				B819AB87212AAC8400B5542C /* NSDictionary+Hash.m in Sources */,
 				B856FEFF2109AA2D00DB6CB1 /* UITextField+Extension.m in Sources */,
+				B8E97B8E21C4C37400075FCB /* UIColor+Extension.m in Sources */,
 				B819AB5C212A6CE300B5542C /* UIView+Extension.m in Sources */,
+				B8E97B8A21C4C30C00075FCB /* NSObject+Extension.m in Sources */,
 				B819AB61212A6D4D00B5542C /* UIImage+Extension.m in Sources */,
+				B8E97B8521C4C26E00075FCB /* VCRFuncTool.m in Sources */,
 				B819AB70212A8CAF00B5542C /* UINavigationController+StatusBar.m in Sources */,
 				B819AB86212AAC8400B5542C /* NSDictionary+Property.m in Sources */,
 				B856FF082109CC4300DB6CB1 /* NSString+Hash.m in Sources */,
