@@ -119,6 +119,7 @@ Pod::Spec.new do |s|
     s.dependency 'AFNetworking', '~> 3.1.0'
     s.dependency 'SVProgressHUD'
     s.dependency 'Masonry'
+    s.dependency 'XMLDictionary'
     
     path = 'STTFrameworks/STTFrameworks/'
     
