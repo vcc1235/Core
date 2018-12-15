@@ -19,12 +19,13 @@
 /** 各个功能调用中心遵循协议 **/
 #import "UntilProtocol.h"
 
-typedef NS_ENUM(NSUInteger, RMTransition) {
+typedef enum NSInteger{
     RMTransitionPresent,
     RMTransitionPush,
     RMTRansitionNAVPresent,
     RMTransitionNone
-};
+    
+}RMTransition;
 
 @interface Until : NSObject
 
