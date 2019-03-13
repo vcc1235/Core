@@ -17,13 +17,7 @@
 #  endif
 #endif /* !defined(CG_EXTERN) */
 
-/** ID **/
-ST_EXTERN  NSString *FRAMEWORKSBUNDLEID ;
-/*** 语言 ***/
-/** 中文 **/
-ST_EXTERN  NSString *CHINESELANGUAGE ;
-/** English **/
-ST_EXTERN  NSString *ENGLISHLANGUAGE ;
+
 
 
 
