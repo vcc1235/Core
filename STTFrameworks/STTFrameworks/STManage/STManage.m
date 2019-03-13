@@ -38,6 +38,9 @@
         __shareInstance = [[STManage alloc]init];
         NSData *data = [NSUserDefaults.standardUserDefaults objectForKey:@"STManager.datalist"];
         __shareInstance->__datalist = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        if ([__shareInstance->__datalist isKindOfClass:[NSDictionary class]]) {
+            __shareInstance->__datalist = [NSMutableDictionary dictionaryWithDictionary:__shareInstance->__datalist];
+        }
         if (__shareInstance->__datalist == nil) {
             __shareInstance->__datalist = NSMutableDictionary.alloc.init ;
         }
@@ -70,7 +73,7 @@
         } else if ([value isKindOfClass:[NSArray class]] || [value isKindOfClass:[NSDictionary class]]) {
             [dic setObject:[self arrayOrDicWithObject:value] forKey:name];
         } else if (value == nil) {
-        } else {
+        } else if(![name isEqualToString:@"superclass"]){
             [dic setObject:[self dictionaryRepresentation:value] forKey:name];
         }
     }
