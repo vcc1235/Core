@@ -7,9 +7,3 @@
 //
 
 #import "STIdentifier.h"
-/** Bundle ID **/
- NSString *FRAMEWORKSBUNDLEID = @"com.STTFrameworks";
-/** 中文 **/
- NSString *CHINESELANGUAGE = @"zh-Hans" ;
-/** 英文 **/
- NSString *ENGLISHLANGUAGE = @"en";
