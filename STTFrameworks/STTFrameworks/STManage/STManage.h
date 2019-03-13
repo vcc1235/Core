@@ -21,6 +21,8 @@
 
 -(id)getObjectForKey:(NSString *)key ;
 
+
+-(void)presist ;
 @end
 
 
