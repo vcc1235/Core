@@ -396,6 +396,8 @@ BOOL Device()
     }completion:^(BOOL finished) {
         self->backView.hidden = YES ;
         self->subView.hidden = YES ;
+        [self->backView removeFromSuperview];
+        [self->subView removeFromSuperview];
     }];
     
     if ([_delegate respondsToSelector:@selector(funcToolCancel)]) {
@@ -425,5 +427,4 @@ BOOL Device()
 
 
 @end
-
 
