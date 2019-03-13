@@ -112,6 +112,10 @@
     return [__datalist objectForKey:key];
 }
 
+-(void)removeObjectForKey:(NSString *)key{
+    [__datalist removeObjectForKey:key];
+}
+
 -(void)setObject:(id)object forKey:(NSString *)key{
     
     if (object == nil) {
