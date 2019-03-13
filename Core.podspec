@@ -152,9 +152,9 @@ Pod::Spec.new do |s|
         ss.subspec 'NSObject' do |sss|
             sss.source_files = path+'Category/NSObject/*{.h,.m}'
         end
-        ss.subspec 'NSArray' do |sss|
-            sss.source_files = path+'Category/NSArray/*{.h,.m}'
-        end
+      #  ss.subspec 'NSArray' do |sss|
+      #      sss.source_files = path+'Category/NSArray/*{.h,.m}'
+      #  end
       #  ss.subspec 'NSBundle' do |sss|
       #      sss.source_files = path+'Category/NSBundle/*{.h,.m}'
       #  end
