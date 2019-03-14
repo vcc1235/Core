@@ -55,7 +55,19 @@
 
 
 @implementation STManage (CoreData)
-
++(BOOL)isKindOfClassWithValue:(NSObject *)value{
+    if ([value isKindOfClass:NSString.class]) {
+        return true ;
+    }else if ([value isKindOfClass:NSNumber.class]){
+        return true ;
+    }else if ([value isKindOfClass:NSData.class]){
+        return true ;
+    }else if ([value isKindOfClass:NSDate.class]){
+        return true ;
+    }else{
+        return false ;
+    }
+}
 -(NSDictionary *)dictionaryRepresentation:(NSObject *)object {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     unsigned int count;
@@ -68,7 +80,7 @@
         NSObject *value = [object valueForKey:name];
         NSMutableDictionary *keyName = [NSMutableDictionary dictionaryWithDictionary:@{@"ID":@"id",@"Namespace":@"namespace",@"descriptions":@"description"}];
         name = keyName[name] != nil ? keyName[name] : name;
-        if ([value isKindOfClass:[NSString class]] || [value isKindOfClass:[NSNumber class]]) {
+        if ([self.class isKindOfClassWithValue:value]) {
             [dic setObject:value forKey:name];
         } else if ([value isKindOfClass:[NSArray class]] || [value isKindOfClass:[NSDictionary class]]) {
             [dic setObject:[self arrayOrDicWithObject:value] forKey:name];
@@ -83,7 +95,7 @@
     if ([origin isKindOfClass:[NSArray class]]) {
         NSMutableArray *array = [NSMutableArray array];
         for (NSObject *object in origin) {
-            if ([object isKindOfClass:[NSString class]] || [object isKindOfClass:[NSNumber class]]) {
+            if ([self.class isKindOfClassWithValue:object]) {
                 [array addObject:object];
             } else if ([object isKindOfClass:[NSArray class]] || [object isKindOfClass:[NSDictionary class]]) {
                 [array addObject:[self arrayOrDicWithObject:object]];
@@ -97,9 +109,8 @@
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
         for (NSString *key in originDic.allKeys) {
             id object = [originDic objectForKey:key];
-            if ([object isKindOfClass:[NSString class]] || [object isKindOfClass:[NSNumber class]]) {
+            if ([self.class isKindOfClassWithValue:object]) {
                 [dic setObject:object forKey:key];
-                
             } else if ([object isKindOfClass:[NSArray class]] || [object isKindOfClass:[NSDictionary class]]) {
                 [dic setObject:[self arrayOrDicWithObject:object] forKey:key];
             } else {
