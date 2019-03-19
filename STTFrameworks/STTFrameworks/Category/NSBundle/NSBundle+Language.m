@@ -7,7 +7,6 @@
 //
 
 #import "NSBundle+Language.h"
-#import "NSArray+Extension.h"
 #import <objc/runtime.h>
 
 static const char *_bundlekey = "_bundle_key";
@@ -41,11 +40,11 @@ static const char *_bundlekey = "_bundle_key";
         self.identifiers = @[identifier];
         object_setClass(bundle, [Language class]);
     }else{
-        if (![[self identifiers] containsObject:identifier]) {
-            NSBundle *bundle = [NSBundle bundleWithIdentifier:identifier];
-            self.identifiers = [self.identifiers arrayByAddingObject:identifier];
-            object_setClass(bundle, [Language class]);
-        }
+//         if (![[self identifiers] containsObject:identifier]) {
+//             NSBundle *bundle = [NSBundle bundleWithIdentifier:identifier];
+//             self.identifiers = [self.identifiers arrayByAddingObject:identifier];
+//             object_setClass(bundle, [Language class]);
+//         }
     }
 }
 -(void)setLanguage:(NSString *)language{
