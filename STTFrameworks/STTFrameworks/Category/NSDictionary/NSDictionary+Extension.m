@@ -74,7 +74,7 @@
         return [NSString stringWithFormat:@"%@",result];
     }
     else {
-        return kEmptyString;
+        return @"";
     }
 }
 - (NSNumber *)numberForKey:(id)key
