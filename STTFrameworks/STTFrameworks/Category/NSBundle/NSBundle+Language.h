@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface NSBundle (Language)
 /** 添加语言设置 BundleID **/
--(void)addBundleByIdentifiers:(NSString *)identifier ;
+-(void)addBundleByIdentifiers:(NSString *)identifier andBundle:(NSString *)resourceName type:(NSInteger)type ;
 /** 设置语言 **/
 -(void)setLanguage:(NSString *)language ;
 /** 当前语言 **/

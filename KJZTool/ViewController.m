@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [STManage.shareInstance addBundleByIdentifiers:@"com.STTFrameworks"];
+    [STManage.shareInstance addBundleByIdentifiers:@"com.STTFrameworks" andBundle:@"STResource" type:2];
     
     [STManage.shareInstance setLanguage:@"zh-Hans"];
     
@@ -93,9 +93,9 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    NSString *viewController = @"MVViewController";
-    
-    [self presentViewController:[[NSClassFromString(viewController) alloc]init] animated:false completion:nil];
+//    NSString *viewController = @"MVViewController";
+//
+//    [self presentViewController:[[NSClassFromString(viewController) alloc]init] animated:false completion:nil];
     
 }
 

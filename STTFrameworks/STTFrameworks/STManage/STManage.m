@@ -244,18 +244,16 @@
 
 
 
-
-
 @implementation STManage (NSBundle)
 -(NSBundle *)bundle{
     if (!_bundle) {
         _bundle = [[NSBundle alloc]init];
-        [_bundle addBundleByIdentifiers:NSBundle.mainBundle.bundleIdentifier];
+        [_bundle addBundleByIdentifiers:NSBundle.mainBundle.bundleIdentifier andBundle:@"STResource" type:2];
     }
     return _bundle ;
 }
--(void)addBundleByIdentifiers:(NSString *)identifier{
-    [self.bundle addBundleByIdentifiers:identifier];
+-(void)addBundleByIdentifiers:(NSString *)identifier andBundle:(NSString *)bundle type:(NSInteger)type{
+    [self.bundle addBundleByIdentifiers:identifier andBundle:bundle type:type];
 }
 -(void)setLanguage:(NSString *)language{
     [self.bundle setLanguage:language];
