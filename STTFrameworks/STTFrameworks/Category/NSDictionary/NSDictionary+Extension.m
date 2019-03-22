@@ -61,4 +61,32 @@
     return subString ;
     
 }
+
+// magus: return an empty string if the value is null or not a string.
+- (NSString *)stringForKey:(id)key
+{
+    NSString *result = [self objectForKey:key];
+    if([result isKindOfClass:[NSString class]])
+    {
+        return result;
+    }
+    if ([result isKindOfClass:[NSNumber class]]) {
+        return [NSString stringWithFormat:@"%@",result];
+    }
+    else {
+        return kEmptyString;
+    }
+}
+- (NSNumber *)numberForKey:(id)key
+{
+    NSNumber *result = [self objectForKey:key];
+    if([result isKindOfClass:[NSNumber class]])
+    {
+        return result;
+    }
+    else
+    {
+        return nil;
+    }
+}
 @end

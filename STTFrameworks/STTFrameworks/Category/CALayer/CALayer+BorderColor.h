@@ -16,7 +16,7 @@
 -(void)shake;
 ///  设置边框线颜色
 - (void)setBorderUIColor:(UIColor *)borderColor;
-///  三个视图阴影
+///  设置视图阴影
 -(void)showderRedius:(CGFloat)redius offset:(CGSize)size opacity:(CGFloat)opacity color:(UIColor *)color ;
 
 @end

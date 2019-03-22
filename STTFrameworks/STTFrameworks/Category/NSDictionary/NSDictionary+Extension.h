@@ -14,4 +14,7 @@
 /** 字典转 query 字符串 **/
 -(NSString *)queryString ;
 
+- (NSString *)stringForKey:(id)key;
+
+- (NSNumber *)numberForKey:(id)key ;
 @end

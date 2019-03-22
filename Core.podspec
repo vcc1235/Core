@@ -149,9 +149,9 @@ Pod::Spec.new do |s|
         ss.subspec 'NSNumber' do |sss|
             sss.source_files = path+'Category/NSNumber/*{.h,.m}'
         end
-        ss.subspec 'NSObject' do |sss|
-            sss.source_files = path+'Category/NSObject/*{.h,.m}'
-        end
+        #ss.subspec 'NSObject' do |sss|
+        #    sss.source_files = path+'Category/NSObject/*{.h,.m}'
+        #end
         ss.subspec 'NSArray' do |sss|
             sss.source_files = path+'Category/NSArray/*{.h,.m}'
         end
@@ -165,14 +165,14 @@ Pod::Spec.new do |s|
             sss.source_files = path+'Category/UIColor/*{.h,.m}'
         end
     end
-    s.subspec 'Until' do |ss|
-        ss.dependency s.name+'/Category/NSDictionary'
-        ss.source_files = path+'Until/*{.h,.m}'
-    end
-    s.subspec 'STManage' do |ss|
-        ss.dependency s.name+'/Category'
-        ss.source_files = path+'STManage/*{.h,.m}'
-    end
+    #   s.subspec 'Until' do |ss|
+    #    ss.dependency s.name+'/Category/NSDictionary'
+    #    ss.source_files = path+'Until/*{.h,.m}'
+    # end
+    #s.subspec 'STManage' do |ss|
+    #    ss.dependency s.name+'/Category'
+    #    ss.source_files = path+'STManage/*{.h,.m}'
+    #end
     
     s.subspec 'Core' do |ss|
         ss.source_files = path+'Core/*{.h,.m}'
