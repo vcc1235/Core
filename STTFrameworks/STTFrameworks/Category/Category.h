@@ -18,7 +18,7 @@
 #import "UINavigationController+StatusBar.h"
 #import "NSDictionary+Property.h"
 #import "CALayer+BorderColor.h"
-
+#import "NSDictionary+Extension.h"
 
 
 #endif /* Category_h */
