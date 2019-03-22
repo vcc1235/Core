@@ -8,7 +8,6 @@
 
 #import "VCRFuncTool.h"
 #import "UIColor+Extension.h"
-#import "NSObject+Extension.h"
 #import "UIView+Extension.h"
 
 BOOL Device()
@@ -173,7 +172,7 @@ BOOL Device()
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
-        [self setExtraCellLineHidden:_tableView];
+//        [self setExtraCellLineHidden:_tableView];
     }
     return _tableView ;
     

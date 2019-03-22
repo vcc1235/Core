@@ -294,7 +294,6 @@
 				B856FF012109AA7600DB6CB1 /* NSString */,
 				B856FEFC2109AA1100DB6CB1 /* UITextField */,
 				B856FEF72109A9C000DB6CB1 /* NSNumber */,
-				B8886FA32109928800998E42 /* NSArray */,
 				B8886F9E21097F0800998E42 /* NSBundle */,
 			);
 			path = Category;
@@ -307,13 +306,6 @@
 				B8886FA021097F1F00998E42 /* NSBundle+Language.m */,
 			);
 			path = NSBundle;
-			sourceTree = "<group>";
-		};
-		B8886FA32109928800998E42 /* NSArray */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NSArray;
 			sourceTree = "<group>";
 		};
 		B8886FAC2109960700998E42 /* STManage */ = {
@@ -639,7 +631,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 37CJG8TY79;
+				DEVELOPMENT_TEAM = 2NE6QZ8G7M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -664,7 +656,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 37CJG8TY79;
+				DEVELOPMENT_TEAM = 2NE6QZ8G7M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
