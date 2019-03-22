@@ -20,9 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [STManage.shareInstance addBundleByIdentifiers:FRAMEWORKSBUNDLEID];
+    [STManage.shareInstance addBundleByIdentifiers:@"com.STTFrameworks"];
     
-    [STManage.shareInstance setLanguage:CHINESELANGUAGE];
+    [STManage.shareInstance setLanguage:@"zh-Hans"];
     
     NSString *string = [STManage.shareInstance currentLanguage];
     

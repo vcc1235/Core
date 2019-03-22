@@ -30,21 +30,26 @@ static const char *_bundlekey = "_bundle_key";
     objc_setAssociatedObject(self, @"BundleIdentifier", Identifiers, OBJC_ASSOCIATION_COPY_NONATOMIC);
     [self didChangeValueForKey:@"BundleIdentifier"];
 }
-
-
+-(BOOL)containsIdentifiers:(NSArray *)identifiers withObject:(NSString *)identifer{
+    for (NSString *key in identifiers) {
+        if ([key isEqualToString:identifer]) {
+            return YES ;
+        }
+    }
+    return NO ;
+}
 #pragma mark - 语言设置处理 -
 -(void)addBundleByIdentifiers:(NSString *)identifier{
-    
     if (self.identifiers == nil) {
         NSBundle *bundle = [NSBundle bundleWithIdentifier:identifier];
         self.identifiers = @[identifier];
         object_setClass(bundle, [Language class]);
     }else{
-//         if (![[self identifiers] containsObject:identifier]) {
-//             NSBundle *bundle = [NSBundle bundleWithIdentifier:identifier];
-//             self.identifiers = [self.identifiers arrayByAddingObject:identifier];
-//             object_setClass(bundle, [Language class]);
-//         }
+         if (![self containsIdentifiers:self.identifiers withObject:identifier]) {
+             NSBundle *bundle = [NSBundle bundleWithIdentifier:identifier];
+             self.identifiers = [self.identifiers arrayByAddingObject:identifier];
+             object_setClass(bundle, [Language class]);
+         }
     }
 }
 -(void)setLanguage:(NSString *)language{

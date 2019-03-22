@@ -8,17 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3C0AD2540BE8F0E4BFE4589B /* libPods-KJZTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 378456D25951E2F98D1E0A70 /* libPods-KJZTool.a */; };
-		B844D4B7213635B9008AD799 /* VCRDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B844D4B6213635B9008AD799 /* VCRDataSource.m */; };
 		B846EC2620FD9223000C5D4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B846EC2520FD9223000C5D4D /* AppDelegate.m */; };
 		B846EC2920FD9223000C5D4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B846EC2820FD9223000C5D4D /* ViewController.m */; };
 		B846EC2C20FD9223000C5D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B846EC2A20FD9223000C5D4D /* Main.storyboard */; };
 		B846EC2E20FD9224000C5D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B846EC2D20FD9224000C5D4D /* Assets.xcassets */; };
 		B846EC3120FD9224000C5D4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B846EC2F20FD9224000C5D4D /* LaunchScreen.storyboard */; };
 		B846EC3420FD9224000C5D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B846EC3320FD9224000C5D4D /* main.m */; };
-		B8C9D8662130089000600593 /* MVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C9D8652130089000600593 /* MVViewController.m */; };
-		B8C9D869213008A700600593 /* MVViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C9D868213008A700600593 /* MVViewModel.m */; };
-		B8C9D86C213008B600600593 /* MVModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C9D86B213008B600600593 /* MVModel.m */; };
-		B8C9D86F213008CC00600593 /* MVTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C9D86E213008CC00600593 /* MVTableViewCell.m */; };
 		B8D0E8B7212EAB490080C525 /* STTFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D0E8B6212EAB490080C525 /* STTFrameworks.framework */; };
 		B8D0E8B8212EAB4D0080C525 /* STTFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D0E8B6212EAB490080C525 /* STTFrameworks.framework */; };
 		B8D0E8B9212EAB4D0080C525 /* STTFrameworks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8D0E8B6212EAB490080C525 /* STTFrameworks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -41,8 +36,6 @@
 /* Begin PBXFileReference section */
 		378456D25951E2F98D1E0A70 /* libPods-KJZTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KJZTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D3D3E805F56944E5D11AD5 /* Pods-KJZTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJZTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KJZTool/Pods-KJZTool.debug.xcconfig"; sourceTree = "<group>"; };
-		B844D4B5213635B9008AD799 /* VCRDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCRDataSource.h; sourceTree = "<group>"; };
-		B844D4B6213635B9008AD799 /* VCRDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCRDataSource.m; sourceTree = "<group>"; };
 		B846EC2120FD9223000C5D4D /* KJZTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJZTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B846EC2420FD9223000C5D4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B846EC2520FD9223000C5D4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,14 +46,6 @@
 		B846EC3020FD9224000C5D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B846EC3220FD9224000C5D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B846EC3320FD9224000C5D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B8C9D8642130089000600593 /* MVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVViewController.h; sourceTree = "<group>"; };
-		B8C9D8652130089000600593 /* MVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVViewController.m; sourceTree = "<group>"; };
-		B8C9D867213008A700600593 /* MVViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVViewModel.h; sourceTree = "<group>"; };
-		B8C9D868213008A700600593 /* MVViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVViewModel.m; sourceTree = "<group>"; };
-		B8C9D86A213008B600600593 /* MVModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVModel.h; sourceTree = "<group>"; };
-		B8C9D86B213008B600600593 /* MVModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVModel.m; sourceTree = "<group>"; };
-		B8C9D86D213008CC00600593 /* MVTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVTableViewCell.h; sourceTree = "<group>"; };
-		B8C9D86E213008CC00600593 /* MVTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVTableViewCell.m; sourceTree = "<group>"; };
 		B8D0E8B6212EAB490080C525 /* STTFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = STTFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEFCB010E57DEF7B811FF48 /* Pods-KJZTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJZTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-KJZTool/Pods-KJZTool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,31 +82,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B844D4B22136358E008AD799 /* Table */ = {
-			isa = PBXGroup;
-			children = (
-				B844D4B4213635A2008AD799 /* Delegate */,
-				B844D4B32136359B008AD799 /* DataSource */,
-			);
-			path = Table;
-			sourceTree = "<group>";
-		};
-		B844D4B32136359B008AD799 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				B844D4B5213635B9008AD799 /* VCRDataSource.h */,
-				B844D4B6213635B9008AD799 /* VCRDataSource.m */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		B844D4B4213635A2008AD799 /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
 		B846EC1820FD9223000C5D4D = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +107,6 @@
 				B846EC2520FD9223000C5D4D /* AppDelegate.m */,
 				B846EC2720FD9223000C5D4D /* ViewController.h */,
 				B846EC2820FD9223000C5D4D /* ViewController.m */,
-				B844D4B22136358E008AD799 /* Table */,
-				B8C9D85F2130085C00600593 /* MVVM */,
 				B846EC2A20FD9223000C5D4D /* Main.storyboard */,
 				B846EC2D20FD9224000C5D4D /* Assets.xcassets */,
 				B846EC2F20FD9224000C5D4D /* LaunchScreen.storyboard */,
@@ -156,53 +114,6 @@
 				B846EC3320FD9224000C5D4D /* main.m */,
 			);
 			path = KJZTool;
-			sourceTree = "<group>";
-		};
-		B8C9D85F2130085C00600593 /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				B8C9D8632130087900600593 /* View */,
-				B8C9D8622130087400600593 /* Model */,
-				B8C9D8612130086C00600593 /* ViewModel */,
-				B8C9D8602130086600600593 /* Controller */,
-			);
-			path = MVVM;
-			sourceTree = "<group>";
-		};
-		B8C9D8602130086600600593 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B8C9D8642130089000600593 /* MVViewController.h */,
-				B8C9D8652130089000600593 /* MVViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B8C9D8612130086C00600593 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B8C9D867213008A700600593 /* MVViewModel.h */,
-				B8C9D868213008A700600593 /* MVViewModel.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B8C9D8622130087400600593 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B8C9D86A213008B600600593 /* MVModel.h */,
-				B8C9D86B213008B600600593 /* MVModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B8C9D8632130087900600593 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B8C9D86D213008CC00600593 /* MVTableViewCell.h */,
-				B8C9D86E213008CC00600593 /* MVTableViewCell.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,14 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B844D4B7213635B9008AD799 /* VCRDataSource.m in Sources */,
 				B846EC2920FD9223000C5D4D /* ViewController.m in Sources */,
 				B846EC3420FD9224000C5D4D /* main.m in Sources */,
-				B8C9D869213008A700600593 /* MVViewModel.m in Sources */,
 				B846EC2620FD9223000C5D4D /* AppDelegate.m in Sources */,
-				B8C9D86F213008CC00600593 /* MVTableViewCell.m in Sources */,
-				B8C9D86C213008B600600593 /* MVModel.m in Sources */,
-				B8C9D8662130089000600593 /* MVViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37CJG8TY79;
+				DEVELOPMENT_TEAM = 2NE6QZ8G7M;
 				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				INFOPLIST_FILE = KJZTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,7 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37CJG8TY79;
+				DEVELOPMENT_TEAM = 2NE6QZ8G7M;
 				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				INFOPLIST_FILE = KJZTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
