@@ -185,7 +185,7 @@ Pod::Spec.new do |s|
         ss.subspec 'Scan' do |sss|
             sss.source_files = path+'Lib/Scan/*{.h,.m}'
             sss.resource     = path+'Lib/Scan/CodeScan.bundle'
-
+            sss.vendored_libraries      = path+'Lib/Scan/libVCRQR.a'
         end
     end
     
@@ -193,7 +193,6 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
   #s.resource = path+'STResource.bundle'
-    s.library      = path+'Lib/Scan/libVCRQR.a'
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
