@@ -185,7 +185,7 @@ Pod::Spec.new do |s|
         ss.subspec 'Scan' do |sss|
             sss.source_files = path+'Lib/Scan/*{.h,.m}'
             sss.resource     = path+'Lib/Scan/CodeScan.bundle'
-            sss.vendored_libraries      = path+'Lib/Scan/libVCRQR.a'
+            sss.vendored_libraries      = [path+'Lib/Scan/libVCRQR.a']
         end
     end
     
