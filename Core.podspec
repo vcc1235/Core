@@ -182,6 +182,11 @@ Pod::Spec.new do |s|
             sss.dependency s.name+'/Category'
             sss.source_files = path+'Lib/Func/*{.h,.m}'
         end
+        ss.subspec 'Scan' do |sss|
+            sss.source_files = path+'Lib/Scan/*{.h,.m}'
+            sss.resource     = path+'Lib/Scan/CodeScan.bundle'
+            sss.library      = path+'Lib/Scan/libVCRQR.a'
+        end
     end
     
 

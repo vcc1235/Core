@@ -47,6 +47,11 @@
 		B8886FB52109988900998E42 /* STIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886FB32109988900998E42 /* STIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8886FB62109988900998E42 /* STIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B8886FB42109988900998E42 /* STIdentifier.m */; };
 		B8886FB821099CFA00998E42 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886FB721099CFA00998E42 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B89348162245EAE700EB3F62 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B89348112245EAE700EB3F62 /* CodeScan.bundle */; };
+		B89348172245EAE700EB3F62 /* VCRQRCodeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B89348122245EAE700EB3F62 /* VCRQRCodeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B89348182245EAE700EB3F62 /* VCRScanManage.h in Headers */ = {isa = PBXBuildFile; fileRef = B89348132245EAE700EB3F62 /* VCRScanManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B89348192245EAE700EB3F62 /* libVCRQR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B89348142245EAE700EB3F62 /* libVCRQR.a */; };
+		B893481A2245EAE700EB3F62 /* LBXScanViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B89348152245EAE700EB3F62 /* LBXScanViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8E97B8521C4C26E00075FCB /* VCRFuncTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */; };
 		B8E97B8621C4C26E00075FCB /* VCRFuncTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8E97B8E21C4C37400075FCB /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E97B8C21C4C37400075FCB /* UIColor+Extension.m */; };
@@ -98,6 +103,11 @@
 		B8886FB32109988900998E42 /* STIdentifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STIdentifier.h; sourceTree = "<group>"; };
 		B8886FB42109988900998E42 /* STIdentifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STIdentifier.m; sourceTree = "<group>"; };
 		B8886FB721099CFA00998E42 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		B89348112245EAE700EB3F62 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		B89348122245EAE700EB3F62 /* VCRQRCodeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRQRCodeDelegate.h; sourceTree = "<group>"; };
+		B89348132245EAE700EB3F62 /* VCRScanManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRScanManage.h; sourceTree = "<group>"; };
+		B89348142245EAE700EB3F62 /* libVCRQR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVCRQR.a; sourceTree = "<group>"; };
+		B89348152245EAE700EB3F62 /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
 		B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRFuncTool.m; sourceTree = "<group>"; };
 		B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRFuncTool.h; sourceTree = "<group>"; };
 		B8E97B8C21C4C37400075FCB /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
@@ -109,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89348192245EAE700EB3F62 /* libVCRQR.a in Frameworks */,
 				683AFF567F7E8B261C579817 /* libPods-STTFrameworks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +237,7 @@
 		B819AB72212AAC0E00B5542C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B89348102245EAE700EB3F62 /* Scan */,
 				B8E97B8221C4C25100075FCB /* Func */,
 			);
 			path = Lib;
@@ -320,6 +332,18 @@
 			path = STManage;
 			sourceTree = "<group>";
 		};
+		B89348102245EAE700EB3F62 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				B89348112245EAE700EB3F62 /* CodeScan.bundle */,
+				B89348122245EAE700EB3F62 /* VCRQRCodeDelegate.h */,
+				B89348132245EAE700EB3F62 /* VCRScanManage.h */,
+				B89348142245EAE700EB3F62 /* libVCRQR.a */,
+				B89348152245EAE700EB3F62 /* LBXScanViewStyle.h */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
 		B8E97B8221C4C25100075FCB /* Func */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +374,8 @@
 				B819AB79212AAC4200B5542C /* UntilProtocol.h in Headers */,
 				B819AB5B212A6CE300B5542C /* UIView+Extension.h in Headers */,
 				B819AB67212A6E1300B5542C /* UIButton+Activity.h in Headers */,
+				B89348172245EAE700EB3F62 /* VCRQRCodeDelegate.h in Headers */,
+				B89348182245EAE700EB3F62 /* VCRScanManage.h in Headers */,
 				B819AB60212A6D4D00B5542C /* UIImage+Extension.h in Headers */,
 				B8E97B8621C4C26E00075FCB /* VCRFuncTool.h in Headers */,
 				B819AB82212AAC8400B5542C /* NSDictionary+Extension.h in Headers */,
@@ -357,6 +383,7 @@
 				B819AB6A212A6F5400B5542C /* CALayer+BorderColor.h in Headers */,
 				B819AB6F212A8CAF00B5542C /* UINavigationController+StatusBar.h in Headers */,
 				B819AB83212AAC8400B5542C /* NSDictionary+Property.h in Headers */,
+				B893481A2245EAE700EB3F62 /* LBXScanViewStyle.h in Headers */,
 				B856FF002109AA2D00DB6CB1 /* UITextField+Extension.h in Headers */,
 				B8886FB52109988900998E42 /* STIdentifier.h in Headers */,
 				B8886FB821099CFA00998E42 /* Category.h in Headers */,
@@ -431,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B856FF15210ABC2800DB6CB1 /* STResource.bundle in Resources */,
+				B89348162245EAE700EB3F62 /* CodeScan.bundle in Resources */,
 				B856FF0F2109D2AA00DB6CB1 /* Core.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +671,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/STTFrameworks/Lib/Scan",
+				);
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.STTFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -669,6 +701,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/STTFrameworks/Lib/Scan",
 				);
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.STTFrameworks;

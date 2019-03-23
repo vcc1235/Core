@@ -24,6 +24,7 @@ FOUNDATION_EXPORT const unsigned char STTFrameworksVersionString[];
 
 #import "VCRFuncTool.h"
 
+#import "VCRScanManage.h"
 
 
 
