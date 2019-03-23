@@ -169,10 +169,10 @@ Pod::Spec.new do |s|
         ss.dependency s.name+'/Category/NSDictionary'
         ss.source_files = path+'Until/*{.h,.m}'
      end
-    #s.subspec 'STManage' do |ss|
-    #    ss.dependency s.name+'/Category'
-    #    ss.source_files = path+'STManage/*{.h,.m}'
-    #end
+    s.subspec 'STManage' do |ss|
+        ss.dependency s.name+'/Category'
+        ss.source_files = path+'STManage/*{.h,.m}'
+    end
     
     s.subspec 'Core' do |ss|
         ss.source_files = path+'Core/*{.h,.m}'
