@@ -165,10 +165,10 @@ Pod::Spec.new do |s|
             sss.source_files = path+'Category/UIColor/*{.h,.m}'
         end
     end
-       s.subspec 'Until' do |ss|
-        ss.dependency s.name+'/Category/NSDictionary'
-        ss.source_files = path+'Until/*{.h,.m}'
-     end
+#s.subspec 'Until' do |ss|
+#        ss.dependency s.name+'/Category/NSDictionary'
+#        ss.source_files = path+'Until/*{.h,.m}'
+#     end
     s.subspec 'STManage' do |ss|
         ss.dependency s.name+'/Category'
         ss.source_files = path+'STManage/*{.h,.m}'
