@@ -17,5 +17,6 @@
 -(NSDictionary *)dictionary;
 
 -(NSString *)append:(id)str,... NS_REQUIRES_NIL_TERMINATION ;
-
+/// 编码
+-(NSString *)isDecode ;
 @end

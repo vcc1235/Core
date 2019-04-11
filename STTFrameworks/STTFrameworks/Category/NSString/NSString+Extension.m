@@ -54,6 +54,16 @@
 +(NSString *)analyObject:(id)objc{
     return [NSString stringWithFormat:@"%@",objc];
 }
+
+-(NSString *)isDecode{
+    NSString *content = self ;
+    NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatin1);
+    const char * str = [content cStringUsingEncoding:enc];
+    if (str) {
+        content = [NSString stringWithUTF8String:str];
+    }
+    return content ;
+} 
 @end
 
 
