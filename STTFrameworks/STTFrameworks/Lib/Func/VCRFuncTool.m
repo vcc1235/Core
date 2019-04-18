@@ -143,7 +143,7 @@ BOOL Device()
     if (!_headerlabel) {
         _headerlabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, RectW, 0)];
         _headerlabel.textAlignment = NSTextAlignmentCenter ;
-//        _headerlabel.textColor = UIColor.lightTextColor ;
+        //        _headerlabel.textColor = UIColor.lightTextColor ;
         _headerlabel.font = [UIFont systemFontOfSize:13];
         _headerlabel.textColor = UIColor.lightGrayColor ;
     }
@@ -152,7 +152,8 @@ BOOL Device()
 
 -(void)setTitle:(NSString *)title{
     self.headerlabel.text = title ;
-    self.headerlabel.height = 60.0f ;
+    if(title != nil)
+        self.headerlabel.height = 60.0f ;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -195,7 +196,7 @@ BOOL Device()
             make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
         _tableView.tableHeaderView = self.headerlabel ;
-//        [self setExtraCellLineHidden:_tableView];
+        //        [self setExtraCellLineHidden:_tableView];
     }
     return _tableView ;
     
@@ -436,7 +437,7 @@ BOOL Device()
 
 -(void)show{
     
-//    [subView setHeight:[self subViewShowHeight]];
+    //    [subView setHeight:[self subViewShowHeight]];
     backView.hidden = false ;
     subView.hidden = false ;
     [UIView animateWithDuration:0.25 animations:^{
