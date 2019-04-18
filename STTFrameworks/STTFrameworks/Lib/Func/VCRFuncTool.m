@@ -151,9 +151,15 @@ BOOL Device()
 }
 
 -(void)setTitle:(NSString *)title{
-    self.headerlabel.text = title ;
-    if(title != nil)
+    if(title != nil && title.length>0){
+        self.headerlabel.text = title ;
         self.headerlabel.height = 60.0f ;
+        self.tableView.tableHeaderView = self.headerlabel ;
+    }else{
+        self.headerlabel.height = 0.0f ;
+        //        self.tableView.tableHeaderView = nil ;
+        
+    }
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -377,7 +383,9 @@ BOOL Device()
     CGFloat height = [self getSubViewHeight];
     subView = [[VCRFuncToolView alloc]initWithFrame:CGRectMake(0,RectH,RectW, height)];
     [window addSubview:subView];
-    subView.title = _title ;
+    if (_title != nil) {
+        subView.title = _title ;
+    }
     subView.delegate = self ;
     subView.backColor = self.backColor ;
     subView.tintColor = self.tintColor ;
