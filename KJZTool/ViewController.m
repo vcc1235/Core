@@ -10,7 +10,7 @@
 #import <StoreKit/StoreKit.h>
 #import <STTFrameworks/STTFrameworks.h>
 
-@interface ViewController ()
+@interface ViewController () <VCRFuncToolDelegate>
 
 @end
 
@@ -21,26 +21,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     
-    [STCore networkReachabilityMonitoring];
     
-    NSString *idstr =[NSBundle bundleForClass:STCore.class].bundleIdentifier ;
-    
-    [STCore requestTask:^(STCore *core) {
-        core.url = @"http://ccadmin-api.kanjinzhao.group/v1/community/advertisementWeb/selectAdverisementByTitle?title=ios";
-        core.method = RequestPOST ;
-    } response:^(id  _Nullable resObject, NSError *error) {
-        NSLog(@"%@ ---- error---%@",resObject,error.localizedDescription);
-    }];
-    
-    
-    
-    
-    
-    
-    STCore.requestTask(@"http://ccadmin-api.kanjinzhao.group/v1/community/advertisementWeb/selectAdverisementByTitle?title=ios").requestMethod(RequestPOST).responseTask([STCore setResponse:^(id  _Nullable resObject, NSError *error) {
-        NSLog(@"%@ ---- error---%@",resObject,error.localizedDescription);
-    }]);
-
     
     
     
@@ -91,6 +72,10 @@
 //    NSString *viewController = @"MVViewController";
 //
 //    [self presentViewController:[[NSClassFromString(viewController) alloc]init] animated:false completion:nil];
+    
+//    [[VCRFuncTool initAddFuncToolItems:@[@"确定"] delegate:self ]show];
+    
+    [[VCRFuncTool initAddFuncToolItems:@[@"确定"] title:@"是否删除" delegate:self]show];
     
 }
 

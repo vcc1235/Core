@@ -131,9 +131,29 @@ BOOL Device()
 
 @property (nonatomic, strong) UIColor *tintColor ;
 
+@property (nonatomic, strong) UILabel *headerlabel ;
+
+@property (nonatomic, strong) NSString *title ;
+
 @end
 
 @implementation VCRFuncToolView
+
+-(UILabel *)headerlabel{
+    if (!_headerlabel) {
+        _headerlabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, RectW, 0)];
+        _headerlabel.textAlignment = NSTextAlignmentCenter ;
+//        _headerlabel.textColor = UIColor.lightTextColor ;
+        _headerlabel.font = [UIFont systemFontOfSize:13];
+        _headerlabel.textColor = UIColor.lightGrayColor ;
+    }
+    return _headerlabel ;
+}
+
+-(void)setTitle:(NSString *)title{
+    self.headerlabel.text = title ;
+    self.headerlabel.height = 60.0f ;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -155,6 +175,8 @@ BOOL Device()
     [self.tableView reloadData];
 }
 
+
+
 -(UITableView *)tableView
 {
     
@@ -172,6 +194,7 @@ BOOL Device()
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
+        _tableView.tableHeaderView = self.headerlabel ;
 //        [self setExtraCellLineHidden:_tableView];
     }
     return _tableView ;
@@ -198,8 +221,13 @@ BOOL Device()
 {
     if (section) {
         return 10 ;
-    }else
-        return 0 ;
+    }else{
+        if (self.headerlabel.text==nil) {
+            return 0 ;
+        }else{
+            return 1 ;
+        }
+    };
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -248,6 +276,8 @@ BOOL Device()
 }
 @property (nonatomic, strong) NSArray <VCRFuncToolItem *> *datalist;
 
+@property (nonatomic, strong) NSString *title ;
+
 @end
 
 
@@ -279,13 +309,38 @@ BOOL Device()
     subView.backColor = backColor ;
 }
 
--(instancetype)initAddFuncToolItems:(NSArray<NSString *> *)items
-{
++(instancetype)initAddFuncToolItems:(NSArray <NSString *> *)items {
     VCRFuncTool *func = [[VCRFuncTool alloc]init];
     [func setItemDatalist:items] ;
     [func setupFuncTool];
     return func ;
 }
++(instancetype)initAddFuncToolItems:(NSArray<NSString *> *)items title:(NSString *)title{
+    VCRFuncTool *func = [[VCRFuncTool alloc]init];
+    func.title = title;
+    [func setItemDatalist:items] ;
+    [func setupFuncTool];
+    return func ;
+}
+
++(instancetype)initAddFuncToolItems:(NSArray <NSString *> *)items delegate:(id<VCRFuncToolDelegate>)delegate {
+    VCRFuncTool *func = [[VCRFuncTool alloc]init];
+    func.delegate = delegate ;
+    [func setItemDatalist:items] ;
+    [func setupFuncTool];
+    return func ;
+}
+
++(instancetype)initAddFuncToolItems:(NSArray <NSString *> *)items title:(NSString *)title delegate:(id<VCRFuncToolDelegate>)delegate{
+    VCRFuncTool *func = [[VCRFuncTool alloc]init];
+    func.title = title;
+    func.delegate = delegate ;
+    [func setItemDatalist:items] ;
+    [func setupFuncTool];
+    return func ;
+}
+
+
 
 -(void)setItemDatalist:(NSArray<NSString *> *)datalist
 {
@@ -298,6 +353,16 @@ BOOL Device()
     self.datalist = array ;
 }
 
+-(CGFloat)getSubViewHeight{
+    CGFloat height = (self.datalist.count+1)*44+10 ;
+    if (Device()) {
+        height = (self.datalist.count+1)*48+10 ;
+    }
+    if (self.title != nil) {
+        height = height+60.0f ;
+    }
+    return height ;
+}
 
 -(void)setupFuncTool
 {
@@ -308,12 +373,10 @@ BOOL Device()
     [backView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hidden)]];
     backView.backgroundColor = [UIColor blackColor];
     backView.alpha = 0 ;
-    CGFloat height = (self.datalist.count+1)*44+10 ;
-    if (Device()) {
-        height = (self.datalist.count+1)*48+10 ;
-    }
+    CGFloat height = [self getSubViewHeight];
     subView = [[VCRFuncToolView alloc]initWithFrame:CGRectMake(0,RectH,RectW, height)];
     [window addSubview:subView];
+    subView.title = _title ;
     subView.delegate = self ;
     subView.backColor = self.backColor ;
     subView.tintColor = self.tintColor ;
@@ -339,6 +402,7 @@ BOOL Device()
     item.itemName = name ;
     [array addObject:item];
     self.datalist = array ;
+    subView.height = [self getSubViewHeight] ;
     [subView reloadByData:self.datalist];
     
 }
@@ -355,8 +419,7 @@ BOOL Device()
     [array removeObjectsInArray:filters];
     
     self.datalist = array ;
-    
-    
+    subView.height = [self getSubViewHeight] ;
     [subView reloadByData:self.datalist];
     
 }
@@ -373,7 +436,7 @@ BOOL Device()
 
 -(void)show{
     
-    [subView setHeight:[self subViewShowHeight]];
+//    [subView setHeight:[self subViewShowHeight]];
     backView.hidden = false ;
     subView.hidden = false ;
     [UIView animateWithDuration:0.25 animations:^{

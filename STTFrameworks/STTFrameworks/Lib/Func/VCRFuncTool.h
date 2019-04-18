@@ -50,7 +50,13 @@ BOOL Device(void) ;
 
 @property (nonatomic, strong) UIColor *backColor ;
 
--(instancetype)initAddFuncToolItems:(NSArray <NSString *> *)items ;
++(instancetype)initAddFuncToolItems:(NSArray <NSString *> *)items ;
+
++(instancetype)initAddFuncToolItems:(NSArray <NSString *> *)items delegate:(id<VCRFuncToolDelegate>)delegate ;
+
++(instancetype)initAddFuncToolItems:(NSArray <NSString *> *)items title:(NSString *)title;
+
++(instancetype)initAddFuncToolItems:(NSArray <NSString *> *)items title:(NSString *)title delegate:(id<VCRFuncToolDelegate>)delegate;
 
 -(void)show ;
 
