@@ -47,10 +47,11 @@
 		B8886FB52109988900998E42 /* STIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886FB32109988900998E42 /* STIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8886FB62109988900998E42 /* STIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B8886FB42109988900998E42 /* STIdentifier.m */; };
 		B8886FB821099CFA00998E42 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886FB721099CFA00998E42 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B88CB50E2281757C0054B54A /* VCRQRCodeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB50A2281757C0054B54A /* VCRQRCodeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B88CB50F2281757C0054B54A /* libVCRQR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88CB50B2281757C0054B54A /* libVCRQR.a */; };
-		B88CB5102281757C0054B54A /* LBXScanViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB50C2281757C0054B54A /* LBXScanViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B88CB5112281757C0054B54A /* VCRScanManage.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB50D2281757C0054B54A /* VCRScanManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B88CB518228195390054B54A /* VCRQRCodeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB513228195380054B54A /* VCRQRCodeDelegate.h */; };
+		B88CB519228195390054B54A /* VCRScanManage.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB514228195380054B54A /* VCRScanManage.h */; };
+		B88CB51A228195390054B54A /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B88CB515228195380054B54A /* CodeScan.bundle */; };
+		B88CB51B228195390054B54A /* LBXScanViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB516228195390054B54A /* LBXScanViewStyle.h */; };
+		B88CB51C228195390054B54A /* libVCRQR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88CB517228195390054B54A /* libVCRQR.a */; };
 		B893481C2245EC5B00EB3F62 /* Wen.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B893481B2245EC5B00EB3F62 /* Wen.podspec */; };
 		B8E97B8521C4C26E00075FCB /* VCRFuncTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */; };
 		B8E97B8621C4C26E00075FCB /* VCRFuncTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -103,10 +104,11 @@
 		B8886FB32109988900998E42 /* STIdentifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STIdentifier.h; sourceTree = "<group>"; };
 		B8886FB42109988900998E42 /* STIdentifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STIdentifier.m; sourceTree = "<group>"; };
 		B8886FB721099CFA00998E42 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		B88CB50A2281757C0054B54A /* VCRQRCodeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRQRCodeDelegate.h; sourceTree = "<group>"; };
-		B88CB50B2281757C0054B54A /* libVCRQR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVCRQR.a; sourceTree = "<group>"; };
-		B88CB50C2281757C0054B54A /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
-		B88CB50D2281757C0054B54A /* VCRScanManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRScanManage.h; sourceTree = "<group>"; };
+		B88CB513228195380054B54A /* VCRQRCodeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRQRCodeDelegate.h; sourceTree = "<group>"; };
+		B88CB514228195380054B54A /* VCRScanManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRScanManage.h; sourceTree = "<group>"; };
+		B88CB515228195380054B54A /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		B88CB516228195390054B54A /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
+		B88CB517228195390054B54A /* libVCRQR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVCRQR.a; sourceTree = "<group>"; };
 		B893481B2245EC5B00EB3F62 /* Wen.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Wen.podspec; path = ../../Wen.podspec; sourceTree = "<group>"; };
 		B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRFuncTool.m; sourceTree = "<group>"; };
 		B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRFuncTool.h; sourceTree = "<group>"; };
@@ -119,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B88CB50F2281757C0054B54A /* libVCRQR.a in Frameworks */,
+				B88CB51C228195390054B54A /* libVCRQR.a in Frameworks */,
 				683AFF567F7E8B261C579817 /* libPods-STTFrameworks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,10 +338,11 @@
 		B89348102245EAE700EB3F62 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
-				B88CB50C2281757C0054B54A /* LBXScanViewStyle.h */,
-				B88CB50B2281757C0054B54A /* libVCRQR.a */,
-				B88CB50A2281757C0054B54A /* VCRQRCodeDelegate.h */,
-				B88CB50D2281757C0054B54A /* VCRScanManage.h */,
+				B88CB515228195380054B54A /* CodeScan.bundle */,
+				B88CB516228195390054B54A /* LBXScanViewStyle.h */,
+				B88CB517228195390054B54A /* libVCRQR.a */,
+				B88CB513228195380054B54A /* VCRQRCodeDelegate.h */,
+				B88CB514228195380054B54A /* VCRScanManage.h */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -374,15 +377,16 @@
 				B819AB79212AAC4200B5542C /* UntilProtocol.h in Headers */,
 				B819AB5B212A6CE300B5542C /* UIView+Extension.h in Headers */,
 				B819AB67212A6E1300B5542C /* UIButton+Activity.h in Headers */,
-				B88CB50E2281757C0054B54A /* VCRQRCodeDelegate.h in Headers */,
+				B88CB518228195390054B54A /* VCRQRCodeDelegate.h in Headers */,
+				B88CB519228195390054B54A /* VCRScanManage.h in Headers */,
 				B819AB60212A6D4D00B5542C /* UIImage+Extension.h in Headers */,
 				B8E97B8621C4C26E00075FCB /* VCRFuncTool.h in Headers */,
 				B819AB82212AAC8400B5542C /* NSDictionary+Extension.h in Headers */,
 				B8E97B8F21C4C37400075FCB /* UIColor+Extension.h in Headers */,
 				B819AB6A212A6F5400B5542C /* CALayer+BorderColor.h in Headers */,
 				B819AB6F212A8CAF00B5542C /* UINavigationController+StatusBar.h in Headers */,
-				B88CB5112281757C0054B54A /* VCRScanManage.h in Headers */,
 				B819AB83212AAC8400B5542C /* NSDictionary+Property.h in Headers */,
+				B88CB51B228195390054B54A /* LBXScanViewStyle.h in Headers */,
 				B856FF002109AA2D00DB6CB1 /* UITextField+Extension.h in Headers */,
 				B8886FB52109988900998E42 /* STIdentifier.h in Headers */,
 				B8886FB821099CFA00998E42 /* Category.h in Headers */,
@@ -393,7 +397,6 @@
 				B8886FB22109985900998E42 /* STMacro.h in Headers */,
 				B856FF092109CC4300DB6CB1 /* NSString+Hash.h in Headers */,
 				B8115AF520FF34EF00A610CC /* STTFrameworks.h in Headers */,
-				B88CB5102281757C0054B54A /* LBXScanViewStyle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +463,7 @@
 				B856FF15210ABC2800DB6CB1 /* STResource.bundle in Resources */,
 				B893481C2245EC5B00EB3F62 /* Wen.podspec in Resources */,
 				B856FF0F2109D2AA00DB6CB1 /* Core.podspec in Resources */,
+				B88CB51A228195390054B54A /* CodeScan.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
