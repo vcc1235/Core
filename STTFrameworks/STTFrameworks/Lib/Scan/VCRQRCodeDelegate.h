@@ -33,6 +33,8 @@
 // 扫描获取得到的信息
 -(void)getQRCodeWithImg:(UIImage *)img andStr:(NSString *)info andStyle:(NSString *)style;
 
+/// 获取闪光灯图片
+-(UIImage *)getFlashButtonImageWithState:(BOOL)isFlash ;
 @end
 
 
