@@ -47,10 +47,10 @@
 		B8886FB52109988900998E42 /* STIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886FB32109988900998E42 /* STIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8886FB62109988900998E42 /* STIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B8886FB42109988900998E42 /* STIdentifier.m */; };
 		B8886FB821099CFA00998E42 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = B8886FB721099CFA00998E42 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B88CB518228195390054B54A /* VCRQRCodeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB513228195380054B54A /* VCRQRCodeDelegate.h */; };
-		B88CB519228195390054B54A /* VCRScanManage.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB514228195380054B54A /* VCRScanManage.h */; };
+		B88CB518228195390054B54A /* VCRQRCodeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB513228195380054B54A /* VCRQRCodeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B88CB519228195390054B54A /* VCRScanManage.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB514228195380054B54A /* VCRScanManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B88CB51A228195390054B54A /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B88CB515228195380054B54A /* CodeScan.bundle */; };
-		B88CB51B228195390054B54A /* LBXScanViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB516228195390054B54A /* LBXScanViewStyle.h */; };
+		B88CB51B228195390054B54A /* LBXScanViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB516228195390054B54A /* LBXScanViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B88CB51C228195390054B54A /* libVCRQR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88CB517228195390054B54A /* libVCRQR.a */; };
 		B893481C2245EC5B00EB3F62 /* Wen.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B893481B2245EC5B00EB3F62 /* Wen.podspec */; };
 		B8E97B8521C4C26E00075FCB /* VCRFuncTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */; };
