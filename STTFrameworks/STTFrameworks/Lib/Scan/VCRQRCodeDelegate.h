@@ -17,24 +17,14 @@
 -(void)getQRFinishByViewController:(UIViewController *)viewController ;
 
 
-
-/**
- 扫描错误
- 
- @param error <#error description#>
- */
--(void)qrQRCodeForError:(NSString *)error ;
-
-
 @optional
 // 扫描标题
 -(NSString *)qrDrawTotopTitle ;
-
 // 扫描获取得到的信息
 -(void)getQRCodeWithImg:(UIImage *)img andStr:(NSString *)info andStyle:(NSString *)style;
-
 /// 获取闪光灯图片
 -(UIImage *)getFlashButtonImageWithState:(BOOL)isFlash ;
+
 @end
 
 

@@ -10,7 +10,7 @@
 #import <StoreKit/StoreKit.h>
 #import <STTFrameworks/STTFrameworks.h>
 
-@interface ViewController () <VCRFuncToolDelegate>
+@interface ViewController () <VCRFuncToolDelegate,VCRQRCodeDelegate>
 
 @end
 
@@ -69,18 +69,21 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-//    NSString *viewController = @"MVViewController";
-//
-//    [self presentViewController:[[NSClassFromString(viewController) alloc]init] animated:false completion:nil];
-    
-//    [[VCRFuncTool initAddFuncToolItems:@[@"确定"] delegate:self ]show];
-    
     [[VCRFuncTool initAddFuncToolItems:@[@"确定"] title:@"是否删除" delegate:self]show];
     
 }
 
 
+-(void)funcToolItem:(VCRFuncToolItem *)item AtIndex:(NSInteger)index{
+    [VCRScanManage richScanToBarCodeandViewController:self isPhoto:true style:nil setDelegate:self];
+}
 
+-(void)getQRFinishByViewController:(UIViewController *)viewController{
+    
+}
+-(void)getQRCodeWithImg:(UIImage *)img andStr:(NSString *)info andStyle:(NSString *)style{
+    
+}
 
 
 - (void)didReceiveMemoryWarning {
