@@ -51,7 +51,7 @@
 		B88CB519228195390054B54A /* VCRScanManage.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB514228195380054B54A /* VCRScanManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B88CB51A228195390054B54A /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B88CB515228195380054B54A /* CodeScan.bundle */; };
 		B88CB51B228195390054B54A /* LBXScanViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B88CB516228195390054B54A /* LBXScanViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B88CB51C228195390054B54A /* libVCRQR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88CB517228195390054B54A /* libVCRQR.a */; };
+		B88CB51E2281A7180054B54A /* libVCRQR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88CB51D2281A7180054B54A /* libVCRQR.a */; };
 		B893481C2245EC5B00EB3F62 /* Wen.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B893481B2245EC5B00EB3F62 /* Wen.podspec */; };
 		B8E97B8521C4C26E00075FCB /* VCRFuncTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */; };
 		B8E97B8621C4C26E00075FCB /* VCRFuncTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -108,7 +108,7 @@
 		B88CB514228195380054B54A /* VCRScanManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRScanManage.h; sourceTree = "<group>"; };
 		B88CB515228195380054B54A /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		B88CB516228195390054B54A /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
-		B88CB517228195390054B54A /* libVCRQR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVCRQR.a; sourceTree = "<group>"; };
+		B88CB51D2281A7180054B54A /* libVCRQR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVCRQR.a; sourceTree = "<group>"; };
 		B893481B2245EC5B00EB3F62 /* Wen.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Wen.podspec; path = ../../Wen.podspec; sourceTree = "<group>"; };
 		B8E97B8321C4C26E00075FCB /* VCRFuncTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRFuncTool.m; sourceTree = "<group>"; };
 		B8E97B8421C4C26E00075FCB /* VCRFuncTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRFuncTool.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B88CB51C228195390054B54A /* libVCRQR.a in Frameworks */,
+				B88CB51E2281A7180054B54A /* libVCRQR.a in Frameworks */,
 				683AFF567F7E8B261C579817 /* libPods-STTFrameworks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +340,9 @@
 			children = (
 				B88CB515228195380054B54A /* CodeScan.bundle */,
 				B88CB516228195390054B54A /* LBXScanViewStyle.h */,
-				B88CB517228195390054B54A /* libVCRQR.a */,
 				B88CB513228195380054B54A /* VCRQRCodeDelegate.h */,
 				B88CB514228195380054B54A /* VCRScanManage.h */,
+				B88CB51D2281A7180054B54A /* libVCRQR.a */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
