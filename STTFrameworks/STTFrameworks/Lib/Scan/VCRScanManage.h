@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "VCRQRCodeDelegate.h"
+#import  "LBXScanViewStyle.h"
 
-
-@class LBXScanViewStyle ;
 @interface VCRScanManage : NSObject
 
 
